@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
-
+// import Components from 
+// './lessons/Components'
+import LifeCycle from './lessons/LifeCycle';
+import Container from './components/Container'
+import Counter from './lessons/Counter';
+import MobileUI from './lessons/MobileUI';
+import SwitchButton from './components/SwitchButton';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {/*<Components />*/}
+    <Container reverse='false' title='LifeCycle Tutorial'>
+    <LifeCycle />
+    </Container>
+    <Container reverse={true} title='Counter App'>
+      <Counter />
+    </Container>
+    <Container title='A switch input'>
+    <MobileUI
+     fabOnClick={false}
+     title='Create a switch input'
+     >
+     <SwitchButton />
+     </MobileUI>
+  </Container>
     </div>
   );
 }
